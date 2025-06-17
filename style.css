@@ -1,0 +1,145 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 40px;
+}
+
+.container {
+    background: #fff;
+    width: 450px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos da Lista de Compras */
+#shopping-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 8px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.2s;
+}
+
+/* Item sendo arrastado */
+.list-item.dragging {
+    opacity: 0.5;
+    background: #cce5ff;
+}
+
+.list-item:last-child {
+    border-bottom: none;
+}
+
+/* Checkbox para marcar como comprado */
+.list-item input[type="checkbox"] {
+    margin-right: 12px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Nome do item */
+.list-item .item-name {
+    flex-grow: 1; /* Faz o nome ocupar o espaço disponível */
+    color: #444;
+}
+
+/* Estilo para item comprado */
+.list-item.purchased .item-name {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* "Handle" para arrastar */
+.drag-handle {
+    margin-left: 15px;
+    cursor: grab;
+    color: #aaa;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+.drag-handle:hover {
+    color: #333;
+}
+
+/* Botão de remover */
+.remove-btn {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 0 5px;
+    display: none; /* Escondido por padrão */
+}
+
+.list-item:hover .remove-btn {
+    display: inline; /* Mostra o botão ao passar o mouse */
+}
+
+.remove-btn:hover {
+    color: #cc0000;
+}
+
+
+/* Formulário para adicionar item */
+.add-item-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#new-item-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#add-item-btn {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#add-item-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Contador */
+#item-counter {
+    text-align: center;
+    color: #555;
+    font-size: 16px;
+    font-weight: bold;
+}
