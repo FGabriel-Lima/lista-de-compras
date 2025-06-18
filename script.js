@@ -140,24 +140,3 @@ shoppingList.addEventListener('dragover', (e) => {
     }
 });
 
-// --- INICIALIZAÇÃO ---
-
-// Adiciona alguns itens de exemplo ao carregar a página
-function initializeList() {
-    addNewItem('Arroz');
-    addNewItem('Feijão');
-    addNewItem('Tomate');
-    addNewItem('Papel Higiênico');
-    
-    // Marca alguns como comprados para exemplo
-    const items = shoppingList.querySelectorAll('.list-item');
-    if (items[0]) {
-      items[0].querySelector('input[type="checkbox"]').click();
-    }
-    if (items[2]) {
-      items[2].querySelector('input[type="checkbox"]').click();
-    }
-}
-
-// Roda a inicialização e a primeira contagem
-initializeList();
